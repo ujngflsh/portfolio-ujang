@@ -166,7 +166,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 .hero-title { font-family: var(--font-serif); font-size: clamp(2.4rem, 5.5vw, 4.2rem); font-weight: 700; line-height: 1.1; margin-bottom: 8px; }
 
-/* Teks kecil di antara judul dan subtitle */
 .hero-subline {
   font-family: var(--font-sans);
   font-size: clamp(1.2rem, 2.5vw, 1.5rem);
@@ -176,7 +175,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   line-height: 1.4;
 }
 
-/* Subtitle + ikon developer */
 .hero-intro {
   display: flex; align-items: center; gap: 18px;
   margin-bottom: 36px; max-width: 560px;
@@ -207,7 +205,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   height: 480px;
 }
 
-/* Cahaya biru lembut di belakang foto */
 .hero-image-wrap::before {
   content: '';
   position: absolute;
@@ -221,7 +218,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   pointer-events: none;
 }
 
-/* Foto bulat dengan cincin gradasi ala status medsos */
 .hero-image-wrap .hero-photo,
 .hero-image-wrap .photo-fallback {
   position: absolute;
@@ -244,7 +240,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 .hero-image-wrap .photo-fallback { font-size: 5rem; }
 
-/* Jendela VS Code */
 .vscode-window {
   position: absolute;
   z-index: 1;
@@ -286,7 +281,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .tk-s { color: #ecc48d; }
 .tk-p { color: #cdd6f4; }
 
-/* Badge & floating cards */
 .hero-badge {
   position: absolute; z-index: 3;
   display: flex; align-items: center; gap: 8px;
@@ -309,7 +303,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .card-node { top: 120px; right: -40px; animation-delay: 1.5s; }
 @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
 
-/* Ikon bahasa & framework */
 .hero-tech {
   display: inline-flex;
   align-items: center;
@@ -473,37 +466,30 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .footer-bottom { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding-top: 24px; border-top: 1px solid var(--clr-border); font-size: 0.82rem; color: var(--clr-text-faint); }
 
 /* =========================================================
-   RESPONSIVE — 1024px
+   RESPONSIVE — 1024px (TABLET / LAYAR SETENGAH)
    ========================================================= */
 @media (max-width: 1024px) {
   .services-grid { grid-template-columns: repeat(2, 1fr); }
-  .hero { padding: 120px 32px 80px; gap: 40px; }
-  .hero-image-wrap { width: 440px; height: 400px; }
-  .hero-image-wrap .hero-photo,
-  .hero-image-wrap .photo-fallback { top: 40px; width: 300px; height: 300px; }
-  .vscode-window { width: 340px; font-size: 11.5px; opacity: 0.4; }
-  .code-line { min-height: 20px; line-height: 20px; }
-  .hero-badge { right: 20px; bottom: 30px; }
-  .about-grid, .contact-grid { gap: 48px; }
-}
-
-/* =========================================================
-   RESPONSIVE — 900px
-   ========================================================= */
-@media (max-width: 900px) {
-  .hero { flex-direction: column-reverse; text-align: left; min-height: auto; padding: 110px 24px 80px; }
-  .hero-visual { align-self: center; }
-  .hero-image-wrap { width: min(100%, 400px); height: 360px; }
+  .hero { padding: 120px 32px 80px; gap: 40px; flex-direction: column-reverse; text-align: left; min-height: auto; }
+  
+  /* PERBAIKAN: VS Code disembunyikan dan foto dikecilkan di ukuran 1024px */
+  .vscode-window { display: none; }
+  .hero-image-wrap { width: min(100%, 400px); height: 360px; align-self: center; }
   .hero-image-wrap .hero-photo,
   .hero-image-wrap .photo-fallback { top: 40px; right: 0; width: 260px; height: 260px; }
-  .vscode-window { width: 290px; font-size: 10.5px; opacity: 0.75; }
   .hero-badge { right: 10px; bottom: 40px; }
-  .about-grid, .contact-grid { grid-template-columns: 1fr; }
+  
+  .about-grid, .contact-grid { gap: 48px; grid-template-columns: 1fr; }
   .about-img-wrap { height: 380px; max-width: 420px; }
   .about-exp-badge { right: 12px; }
   .projects-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-inner { grid-template-columns: 1fr 1fr; }
+}
 
+/* =========================================================
+   RESPONSIVE — 900px (MOBILE MENU)
+   ========================================================= */
+@media (max-width: 900px) {
   .hamburger { display: flex; }
   .btn-hire { display: none; }
   .nav-links {
@@ -517,7 +503,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 /* =========================================================
-   RESPONSIVE — 600px
+   RESPONSIVE — 600px (HP KECIL)
    ========================================================= */
 @media (max-width: 600px) {
   .section { padding: 72px 0; }
@@ -528,7 +514,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .hero-cta .btn-primary, .hero-cta .btn-ghost { flex: 1; justify-content: center; }
   .section-header { margin-bottom: 44px; }
 
-  .vscode-window { display: none; }
   .hero-image-wrap { width: 280px; height: 320px; }
   .hero-image-wrap::before { right: 0; width: 300px; height: 300px; }
   .hero-image-wrap .hero-photo,
