@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Check, Github } from 'lucide-react';
 import { profile, links, stats } from '../data.js';
 import { useReveal, useCountUp } from '../hooks.js';
+import ProfilePhoto from './ProfilePhoto.jsx';
 import Reveal from './Reveal.jsx';
 
 function Stat({ value, suffix, label, start }) {
@@ -15,24 +16,7 @@ function Stat({ value, suffix, label, start }) {
   );
 }
 
-export function ProfilePhoto({ className = '' }) {
-  const [failed, setFailed] = useState(false);
-  if (failed || !profile.photo) {
-    return (
-      <div className={`photo-fallback ${className}`} aria-label={profile.name}>
-        {profile.initials}
-      </div>
-    );
-  }
-  return (
-    <img
-      src={profile.photo}
-      alt={profile.name}
-      className={className}
-      onError={() => setFailed(true)}
-    />
-  );
-}
+
 
 /* ---------- Jendela VS Code (gaya macOS) ---------- */
 const codeLines = [
