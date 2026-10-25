@@ -13,7 +13,7 @@ export const profile = {
   email: 'akangujang30@gmail.com',
   whatsapp: '+62 8317-338-143',
   whatsappLink: 'https://wa.me/628317338143',
-  photo: '/foto.png',
+  photo: '/foto-ujang-baru.png',
   cvUrl: '',
   available: true,
   availableText: 'Available for new projects',
