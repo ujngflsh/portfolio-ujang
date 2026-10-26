@@ -101,14 +101,14 @@ export const projects = [
     repo: 'https://github.com/ujngflsh/tanidesaa',
   },
   {
-    title: 'Dashboard UI',
-    category: 'web',
-    description: 'Admin dashboard template.',
-    tags: ['React', 'Tailwind CSS'],
-    image: '/projects/download.png',
-    link: 'https://dashboard-dtin4d826-ujngfdevs-projects.vercel.app', // <-- GANTI dengan link live project Anda
-    repo: 'https://github.com/ujngflsh/Dashboard-UI',
-  },
+  title: 'Dashboard UI',
+  category: 'web',
+  description: 'Admin dashboard template.',
+  tags: ['React', 'Tailwind CSS'],
+  image: '/projects/download.png',
+  link: 'https://dashboard-ui-pi-topaz.vercel.app/',
+  repo: 'https://github.com/ujngflsh/Dashboard-UI',
+},
   {
     title: 'E-commerce UI',
     category: 'web',
