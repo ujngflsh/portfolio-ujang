@@ -105,8 +105,8 @@ export const projects = [
     category: 'web',
     description: 'Admin dashboard template.',
     tags: ['React', 'Tailwind CSS'],
-    image: '/projects/dashboard-ui.png',
-    link: 'https://dashboard-ui-ujang.vercel.app', // <-- GANTI dengan link live project Anda
+    image: '/projects/download.png',
+    link: 'https://dashboard-ui-ten-phi.vercel.app/', // <-- GANTI dengan link live project Anda
     repo: 'https://github.com/ujngflsh/Dashboard-UI',
   },
   {
