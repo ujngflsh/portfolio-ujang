@@ -92,7 +92,7 @@ export const services = [
 
 export const projects = [
   {
-    title: 'tani-store',
+    title: 'tanidesaa',
     category: 'web',
     description: 'Frontend for tani-store landing page.',
     tags: ['React', 'Tailwind CSS'],
@@ -113,7 +113,7 @@ export const projects = [
     title: 'E-commerce UI',
     category: 'web',
     description: 'Simple Web3 Store dApp dengan Next.js & Ethers.js.',
-    tags: ['Next.js', 'Web3', 'Tailwind CSS'],
+    tags: ['Next.js', 'Tailwind CSS'],
     image: '/projects/ujngshop.png',
     link: 'https://ujngshop.vercel.app', // <-- Ini sudah benar
     repo: 'https://github.com/ujngflsh/ujngshop',
