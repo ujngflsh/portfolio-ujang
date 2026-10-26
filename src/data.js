@@ -97,8 +97,8 @@ export const projects = [
     description: 'Frontend for tani-store landing page.',
     tags: ['React', 'Tailwind CSS'],
     image: '/projects/tani-store.png',
-    link: 'https://tani-store.vercel.app', // <-- GANTI dengan link live project Anda
-    repo: 'https://github.com/ujngflsh/tani-store',
+    link: 'https://tanidesaa.vercel.app/', // <-- GANTI dengan link live project Anda
+    repo: 'https://github.com/ujngflsh/tanidesaa',
   },
   {
     title: 'Dashboard UI',
