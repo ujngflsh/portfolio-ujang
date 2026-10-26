@@ -128,13 +128,13 @@ export const projects = [
     repo: 'https://github.com/ujngflsh/portfolio-tamplate-premium',
   },
   {
-    title: 'Blog Platform',
+    title: 'ujngshop',
     category: 'web',
-    description: 'Static blog built with MDX.',
-    tags: ['React', 'MDX'],
-    image: '/projects/blog-platform.png',
-    link: '',
-    repo: 'https://github.com/ujngflsh/ujng-blog-platform',
+    description: 'Simple Web3 Store dApp dengan Next.js & Ethers.js.',
+    tags: ['Next.js', 'Web3', 'Tailwind CSS'],
+    image: '/projects/ujngshop.png', // <-- Pastikan gambar ini ada di folder public/projects/
+    link: 'https://ujngshop.vercel.app',
+    repo: 'https://github.com/ujngflsh/ujngshop',
   },
   {
     title: 'Component Library',
