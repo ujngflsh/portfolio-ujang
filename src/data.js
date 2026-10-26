@@ -97,7 +97,7 @@ export const projects = [
     description: 'Frontend for tani-store landing page.',
     tags: ['React', 'Tailwind CSS'],
     image: '/projects/tani-store.png',
-    link: '',
+    link: 'https://tani-store.vercel.app', // <-- GANTI dengan link live project Anda
     repo: 'https://github.com/ujngflsh/tani-store',
   },
   {
@@ -106,44 +106,17 @@ export const projects = [
     description: 'Admin dashboard template.',
     tags: ['React', 'Tailwind CSS'],
     image: '/projects/dashboard-ui.png',
-    link: '',
+    link: 'https://dashboard-ui-ujang.vercel.app', // <-- GANTI dengan link live project Anda
     repo: 'https://github.com/ujngflsh/Dashboard-UI',
   },
   {
     title: 'E-commerce UI',
     category: 'web',
-    description: 'Frontend for e-commerce.',
-    tags: ['React', 'Redux'],
-    image: '/projects/ecommerce-ui.jpg',
-    link: '',
-    repo: 'https://github.com/ujngflsh/E-commerce-UI',
-  },
-  {
-    title: 'Portfolio Template',
-    category: 'web',
-    description: 'Portfolio template made with React.',
-    tags: ['React', 'Tailwind CSS'],
-    image: '/projects/portfolio-template.png',
-    link: '',
-    repo: 'https://github.com/ujngflsh/portfolio-tamplate-premium',
-  },
-  {
-    title: 'ujngshop',
-    category: 'web',
     description: 'Simple Web3 Store dApp dengan Next.js & Ethers.js.',
     tags: ['Next.js', 'Web3', 'Tailwind CSS'],
-    image: '/projects/ujngshop.png', // <-- Pastikan gambar ini ada di folder public/projects/
-    link: 'https://ujngshop.vercel.app',
+    image: '/projects/ujngshop.png',
+    link: 'https://ujngshop.vercel.app', // <-- Ini sudah benar
     repo: 'https://github.com/ujngflsh/ujngshop',
-  },
-  {
-    title: 'Component Library',
-    category: 'web',
-    description: 'Reusable UI component library.',
-    tags: ['React', 'Tailwind CSS'],
-    image: '/projects/component-library.png',
-    link: '',
-    repo: 'https://github.com/ujngflsh/Component-Library',
   },
 ];
 
