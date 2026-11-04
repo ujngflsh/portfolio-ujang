@@ -90,36 +90,39 @@ export const services = [
   },
 ];
 
+
 export const projects = [
   {
-    title: 'tanidesaa',
+    title: 'Analytics Dashboard UI',
     category: 'web',
-    description: 'Frontend for tani-store landing page.',
-    tags: ['React', 'Tailwind CSS'],
-    image: '/projects/tani-store.png',
-    link: 'https://tanidesaa.vercel.app/', // <-- GANTI dengan link live project Anda
-    repo: 'https://github.com/ujngflsh/tanidesaa',
+    description:
+      'An inventory management dashboard for tracking products, stock levels and business reports.',
+    tags: ['React', 'TypeScript', 'Tailwind CSS'],
+    image: '/projects/stock-flow.png',
+    link: 'https://stock-flow-navy.vercel.app/',
+    repo: 'https://github.com/ujngflsh/StockFlow',
   },
   {
-  title: 'Dashboard UI',
-  category: 'web',
-  description: 'Admin dashboard template.',
-  tags: ['React', 'Tailwind CSS'],
-  image: '/projects/download.png',
-  link: 'https://dashboard-ui-pi-topaz.vercel.app/',
-  repo: 'https://github.com/ujngflsh/Dashboard-UI',
-},
-  {
-    title: 'E-commerce UI',
+    title: 'Product Launch Landing Page',
     category: 'web',
-    description: 'Simple Web3 Store dApp dengan Next.js & Ethers.js.',
-    tags: ['Next.js', 'Tailwind CSS'],
-    image: '/projects/ujngshop.png',
-    link: 'https://ujngshop.vercel.app', // <-- Ini sudah benar
-    repo: 'https://github.com/ujngflsh/ujngshop',
+    description:
+      'A premium product landing page concept designed to present a smartwatch and its features.',
+    tags: ['React', 'Tailwind CSS'],
+    image: '/projects/auren-product-launch.png',
+    link: 'https://auren-product-launch.vercel.app/',
+    repo: 'https://github.com/ujngflsh/auren-product-launch',
+  },
+  {
+    title: 'Coffee Brand Website',
+    category: 'web',
+    description:
+      'A modern coffee brand website concept featuring a welcoming storefront and seasonal menu.',
+    tags: ['Astro', 'Tailwind CSS'],
+    image: '/projects/lowlight-coffee.png',
+    link: 'https://lowlight-coffee.vercel.app/',
+    repo: 'https://github.com/ujngflsh/lowlight-coffee',
   },
 ];
-
 // Tab filter otomatis disembunyikan kalau hanya ada 1 kategori.
 export const projectFilters = [
   { id: 'all', label: 'All' },
