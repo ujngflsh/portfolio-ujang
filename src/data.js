@@ -123,7 +123,7 @@ export const projects = [
     repo: 'https://github.com/ujngflsh/lowlight-coffee',
   },
 ];
-// Tab filter otomatis disembunyikan kalau hanya ada 1 kategori.
+
 export const projectFilters = [
   { id: 'all', label: 'All' },
   { id: 'web', label: 'Web App' },
