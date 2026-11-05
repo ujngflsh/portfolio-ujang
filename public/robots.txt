@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://portfolio-ujang.vercel.app/sitemap-index.xml

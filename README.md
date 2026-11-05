@@ -1,46 +1,79 @@
-# Upwork Portfolio (React + Vite)
+# UjangDev Portfolio
 
-Portofolio freelance dibuat dengan React 18 + Vite, dibuat berdasarkan desain
-repo referensi `RanggaKristian/Web-Portofolio` (Hero, About, Services, Work, Testimonials, Contact).
+A polished, responsive one-page portfolio built with Astro and Tailwind CSS, prepared for static deployment to Vercel. The visual direction is dark editorial with electric-blue and mint accents. The Hero uses a large headline, concise service positioning, clear calls to action, and a profile panel that does not pretend to be a real portrait.
 
-## Menjalankan
+## Important source-content note
+
+The existing site at `https://portfolio-ujang.vercel.app/` exposed only the page title (`UjangDev — Front-End Developer`) through the available retrieval path. Its body text, personal portrait, project screenshots, and profile links could not be retrieved. This package therefore uses the verified brand/title plus honest, clearly labeled concept-project examples. It does **not** claim those concepts are client work, and it does not fabricate testimonials, client names, metrics, awards, or a personal photo.
+
+Before using the site to pitch clients, replace `[ISI DI SINI]` fields in `src/data/site.ts` with verified contact/profile details and replace concept projects with actual work when you have the correct project details and screenshots. The layout and interactions are implemented; personal-content verification is still required.
+
+## Requirements
+
+- Node.js 20.3+ (Node 22 LTS recommended)
+- npm
+
+## Run locally
 
 ```bash
 npm install
-npm run dev      # http://localhost:5173
-npm run build    # hasil di folder dist/
-npm run preview  # cek hasil build
+npm run dev
 ```
 
-## Yang WAJIB kamu ganti
+Open the local URL printed by Astro.
 
-Semua konten ada di **`src/data.js`** (cari tanda `EDIT`):
+## Edit content
 
-1. `links.upwork` — link profil Upwork kamu (dipakai di tombol "Hire Me on Upwork").
-2. `profile` — nama, role, email, lokasi, tagline.
-3. `projects` — project asli (gambar, deskripsi, link demo/GitHub).
-4. `stats` / `about.skills` — isi dengan angka yang benar (atau kosongkan `stats`).
-5. `testimonials` — isi hanya dengan review asli. Kosong = section disembunyikan otomatis.
-6. Foto: taruh di `public/profile.png` (tanpa foto akan tampil inisial).
-7. Judul/deskripsi SEO di `index.html`.
+Most content is in `src/data/site.ts`. Update the profile details, email, links, bio, stack, services, and projects there. Keep project labels accurate: use `Personal project` for self-initiated work and `Concept project` for speculative explorations. Do not publish unverified results.
 
-## Form kontak
+## Add the real portrait and project screenshots
 
-- `contact.formEndpoint` kosong → tombol Send membuka aplikasi email (`mailto:`).
-- Mau kirim langsung tanpa buka email? Daftar di [Formspree](https://formspree.io), lalu isi
-  `formEndpoint` dengan `https://formspree.io/f/xxxxxx`.
+1. Create `public/images/`.
+2. Add optimized WebP or AVIF images with explicit dimensions.
+3. Set `photo: "/images/ujang.webp"` in `src/data/site.ts`.
+4. Set each project's `image` to a local path such as `"/images/dashboard.webp"`.
 
-## Deploy gratis
+The hero portrait loads with high priority; project images load lazily. Until the actual portrait is available, the hero shows a designed profile panel rather than a stock/fabricated headshot.
 
-- **Vercel / Netlify**: import repo GitHub → build command `npm run build`, output `dist`.
-- **GitHub Pages**: tambahkan `base: '/nama-repo/'` di `vite.config.js`, lalu deploy folder `dist`.
+## Contact form
 
-## Struktur
+The form validates name, email, and message. It reports success only when the configured endpoint returns a successful HTTP response.
 
+1. Configure a serverless endpoint or form provider that accepts JSON `POST` requests.
+2. Set `PUBLIC_CONTACT_ENDPOINT` in `.env` and in Vercel Project Settings → Environment Variables.
+3. Make sure the endpoint validates input, handles spam/rate limiting, and returns a 2xx response only after accepting the message.
+4. Test valid, invalid, failed, and successful submissions after deployment.
+
+Without an endpoint, the form will offer a mailto fallback only if a valid email address has been configured. It will not claim a message was sent when it was not. `PUBLIC_` variables are exposed in client output, so never place a secret API key there.
+
+## Deploy to Vercel
+
+1. Push this folder to a Git repository.
+2. Import the repository in Vercel.
+3. Select Astro as the framework preset.
+4. Build command: `npm run build`.
+5. Output directory: `dist`.
+6. Add `PUBLIC_CONTACT_ENDPOINT` if using a form endpoint.
+7. Deploy and test the production site.
+
+The canonical domain is currently `https://portfolio-ujang.vercel.app` in `astro.config.mjs` and `src/data/site.ts`. Update both if deploying to another domain.
+
+## Included
+
+- Static-rendered Astro page and Tailwind CSS v4
+- Responsive single-page sections: Hero, selected work, services/process, about, contact
+- No testimonial section unless real testimonials are supplied
+- Title/description, canonical URL, Open Graph, Twitter card, Person JSON-LD, sitemap, favicon
+- Semantic landmarks, skip link, keyboard focus styles, labeled form fields, live form status, reduced-motion support
+- No analytics, tracking scripts, or cookie banner
+
+## Quality checks
+
+Run:
+
+```bash
+npm run check
+npm run build
 ```
-src/
-  data.js            ← semua konten (edit di sini)
-  hooks.js           ← reveal-on-scroll, count-up, active nav
-  styles.css         ← tema gelap + responsive
-  components/        ← Navbar, Hero, About, Services, Work, Testimonials, Contact, Footer
-```
+
+A production build and Lighthouse audit were **not verified in this environment** because package installation could not complete. After `npm install`, run the checks above and test at 390px and 1366px, then manually test contact delivery. Do not publish Lighthouse scores unless you have actually run the audit.
